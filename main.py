@@ -8,7 +8,7 @@ import argparse
 
 import matplotlib.pyplot as plt  # noqa: F401  (backend initialisation)
 
-from permit_mining import (
+from precess_mining import (
     backup,
     conformance,
     config,
@@ -78,7 +78,7 @@ def main():
         discovery.yearly_bpmn_models(windows)
     else:
         # Sections 2 and 3 still need the simplified logs A and E
-        from permit_mining.utils import simplify_activity_name, simplify_and_map_activity_name
+        from precess_mining.utils import simplify_activity_name, simplify_and_map_activity_name
 
         simplified_log_A = simplify_activity_name(copy_A)
         log_E = simplify_and_map_activity_name(copy_E, config.ACTIVITY_CLASSIFICATION)
